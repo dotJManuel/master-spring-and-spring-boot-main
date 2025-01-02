@@ -1,0 +1,64 @@
+
+Dependencies  Spring initializr
+-> Spring Web
+-> Spring Data JPA
+-> H2 Database
+-> Spring Boot DevTools
+
+URLs
+
+Swagger UI: http://localhost:8080/swagger-ui.html
+Open API Spec: http://localhost:8080/v3/api-docs
+
+
+Content Negotiation
+Respuestas XML y Json
+Header: Accept Value: application/json o application/xml
+
+
+Exploring Internationalization for REST API - Multiple language
+Header: Accept-Language Value: nl
+
+
+#########
+Implementing HATEOAS for REST API Hypermedia as the Engine of Application State
+@GetMapping("/users/{id}")
+#########
+
+Monitoring APIs with Spring Boot Actuator
+http://localhost:8080/actuator
+
+Exploring APIs with Spring Boot HAL Explorer
+http://localhost:8080/explorer/index.html#
+
+H2-Console
+http://localhost:8080/h2-console
+
+###################
+
+Connecting REST API to MySQL Database - An Overview
+
+Launch MySQL as Docker Container
+docker run --detach --env MYSQL_ROOT_PASSWORD=dummypassword --env MYSQL_USER=social-media-user --env MYSQL_PASSWORD=dummypassword --env MYSQL_DATABASE=social-media-database --name mysql --publish 3306:3306 mysql:8-oracle
+
+mysqlsh commands
+`
+mysqlsh
+\connect social-media-user@localhost:3306
+\sql
+use social-media-database
+select * from user_details;
+select * from post;
+\quit
+`
+
+###################
+
+
+
+
+
+
+
+
+
